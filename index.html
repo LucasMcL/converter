@@ -5,6 +5,21 @@
 </head>
 <body>
 
+<form>
+	<input type="text" name="temperature" id="temperature">
+	
+	<label for="radio_f">To Fahrenheit</label>
+	<input type="radio" name="unit" value="radio_f">
+	<label for="radio_c">To Celcius</label>
+	<input type="radio" name="unit" value="radio_c", checked=true>
+
+	<button name="converter">Convert</button>
+	<button name="clear">Clear</button>
+</form>
+
+<br>
+<div id="temp_output">TEAEST</div>
+
 <script src="converter.js" type="text/javascript"></script>
 </body>
 </html>
