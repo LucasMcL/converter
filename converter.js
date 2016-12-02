@@ -46,19 +46,46 @@ var clearBtn = document.getElementById('clear_btn');
 ////////////////////
 
 // Convert Feherenheit temperature to Celcius
-function toCelsius (temp) {
+var convertToC = function(temp) {
  temp = (temp - 32) * (5/9);
  temp = temp.toFixed(1); // Round to one decimal place
  return temp;
 }
 
 // Convert Celcius temperature to Fahrenheit
-function toFahrenheit (temp) {
+var convertToF = function(temp) {
   temp = temp * 1.8 + 32;
   temp = temp.toFixed(1); // Round to one decimal place
   return temp;
 }
 
+// Outputs boolean; true = convert to celcius, false = convert to fahrenheit
+var whichTemp = function() {
+
+}
+
+// Actual function to execute on button press
+var outputTemperature = function() {
+  console.log("You clicked the convert button");
+}
+
+var clearInput = function() {
+  console.log("You clicked the clear button")
+}
+
+
+
 ///////////////////////
 //Add Event Listeners//
 ///////////////////////
+
+convertBtn.onclick = outputTemperature;
+
+
+
+
+
+
+
+
+
