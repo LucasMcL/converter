@@ -61,12 +61,22 @@ var convertToF = function(temp) {
 
 // Outputs boolean; true = convert to celcius, false = convert to fahrenheit
 var whichTemp = function() {
-
+  if (radioEl_C.checked) {
+    console.log('The Celcius button is currently selected');
+    return true;
+  }
+  else {
+    console.log('The Fahrenheit button is currently selected');
+    return false;
+  }
 }
 
 // Actual function to execute on button press
 var outputTemperature = function() {
-  console.log("You clicked the convert button");
+  console.log("You clicked the convert button or pushed the enter key");
+  if (whichTemp === true) {
+
+  }
 }
 
 var clearInput = function() {
@@ -80,6 +90,14 @@ var clearInput = function() {
 ///////////////////////
 
 convertBtn.onclick = outputTemperature;
+clearBtn.onclick = clearInput;
+
+//Event listener to listen for enter key button press in text field
+tempEl.addEventListener("keydown", function (e) {
+    if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
+        outputTemperature();
+    }
+});
 
 
 
