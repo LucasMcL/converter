@@ -10,12 +10,24 @@
 // If the temperature is less than 32F/0C the color of the converted temperature should be blue.
 // For any other temperature, the color should be green.
 
+//////////////////////////////////////////////////////////////////////////////
+
 //Overall structure:
   //Get elements needed
+    //Text from input field
+    //Radio button value
+    //Convert button
+    //Clear button
+    //Enter button pressed in input field?
   //Define functions
+    //To Fahrenheit
+    //To Celcius
+    //Which radio button function
   //Add event listeners
+    //Figure this out later...
 
 
+//////////////////////////////////////////////////////////////////////////////
 
 // Convert Feherenheit temperature to Celcius
 function toCelsius (temp) {
