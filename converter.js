@@ -86,6 +86,7 @@ var outputTemperature = function() {
 
 var clearInput = function() {
   console.log("You clicked the clear button")
+  tempEl.value = "";
 }
 
 
