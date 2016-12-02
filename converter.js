@@ -23,6 +23,7 @@
     //To Fahrenheit
     //To Celcius
     //Which radio button function
+      //This can't be an "on click" in case they go with the default option and don't click
   //Add event listeners
     //Figure this out later...
 
