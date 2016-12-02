@@ -27,6 +27,8 @@
   //Add event listeners
     //Figure this out later...
 
+  //How to do colors?
+
 
 //////////////////////////////////////////////////////////////////////////////
 
@@ -60,6 +62,32 @@ var convertToF = function(temp) {
   return temp;
 }
 
+// Color for fahrenheit temperature
+var whatColorFahrenheit = function(temp) {
+  if (temp >= 90) {
+    return "red";
+  }
+  else if (temp <= 32) {
+    return "blue";
+  }
+  else {
+    return "green";
+  }
+}
+
+// Color for celcius temperature
+var whatColorCelcius = function(temp) {
+  if (temp >= 32) {
+    return "red";
+  }
+  else if (temp <= 0) {
+    return "blue";
+  }
+  else {
+    return "green";
+  }
+}
+
 // Outputs boolean; true = convert to celcius, false = convert to fahrenheit
 var whichTemp = function() {
   if (radioEl_C.checked) {
@@ -73,14 +101,19 @@ var whichTemp = function() {
 }
 
 // Actual function to execute on button press
+// Uses inline CSS to handle colors
 var outputTemperature = function() {
   console.log("You clicked the convert button or pushed the enter key");
-  temp = tempEl.value;
+  inputTemp = tempEl.value; // grab input value
   if (whichTemp() === true) { // If celcius button is checked...
-    outputEl.innerHTML = convertToC(temp);
+    outputTemp = convertToC(inputTemp); // Output temp is in Celcius (input is F)
+    outputEl.innerHTML = '<font color="' + whatColorCelcius(outputTemp) + '">' +
+    outputTemp + '&deg C</font>';
   }
   else { // If fahrenheit button is checked
-    outputEl.innerHTML = convertToF(temp);
+    outputTemp = convertToF(inputTemp); //output temp is Fahrenheit (input is C)
+    outputEl.innerHTML = '<font color="' + whatColorFahrenheit(outputTemp) + '">' +
+    outputTemp + '&deg F</font>';
   }
 }
 
