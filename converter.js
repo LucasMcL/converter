@@ -39,6 +39,7 @@ var radioEl_F = document.getElementById('radio_f');
 var radioEl_C = document.getElementById('radio_c');
 var convertBtn = document.getElementById('convert_btn');
 var clearBtn = document.getElementById('clear_btn');
+var outputEl = document.getElementById('temp_output');
 
 
 ////////////////////
@@ -74,8 +75,12 @@ var whichTemp = function() {
 // Actual function to execute on button press
 var outputTemperature = function() {
   console.log("You clicked the convert button or pushed the enter key");
-  if (whichTemp === true) {
-
+  temp = tempEl.value;
+  if (whichTemp() === true) { // If celcius button is checked...
+    outputEl.innerHTML = convertToC(temp);
+  }
+  else { // If fahrenheit button is checked
+    outputEl.innerHTML = convertToF(temp);
   }
 }
 
