@@ -10,41 +10,23 @@
 // If the temperature is less than 32F/0C the color of the converted temperature should be blue.
 // For any other temperature, the color should be green.
 
-function toCelsius () {
+//Overall structure:
+  //Get elements needed
+  //Define functions
+  //Add event listeners
 
+
+
+// Convert Feherenheit temperature to Celcius
+function toCelsius (temp) {
+ temp = (temp - 32) * (5/9);
+ temp = temp.toFixed(1); // Round to one decimal place
+ return temp;
 }
 
-function toFahrenheit () {
-
+// Convert Celcius temperature to Fahrenheit
+function toFahrenheit (temp) {
+  temp = temp * 1.8 + 32;
+  temp = temp.toFixed(1); // Round to one decimal place
+  return temp;
 }
-
-outputElement = document.getElementById('temp_output');
-converterElement = document.getElementById('converter');
-converterElement.addEventListener("click", function() {outputElement.innerHTML = "Hi"});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // Get a reference to the button element in the DOM
-// var button = document.getElementById("converter");
-
-// // This function should determine which conversion should
-// // happen based on which radio button is selected.
-// function determineConverter (clickEvent) {
-//   console.log("event", clickEvent);
-// }
-
-// // Assign a function to be executed when the button is clicked
-// // button.addEventListener("click", determineConverter);
