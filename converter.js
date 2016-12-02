@@ -30,6 +30,21 @@
 
 //////////////////////////////////////////////////////////////////////////////
 
+
+///////////////////////
+//Get Elements Needed//
+///////////////////////
+var tempEl = document.getElementById('temp_input');
+var radioEl_F = document.getElementById('radio_f');
+var radioEl_C = document.getElementById('radio_c');
+var convertBtn = document.getElementById('convert_btn');
+var clearBtn = document.getElementById('clear_btn');
+
+
+////////////////////
+//Define Functions//
+////////////////////
+
 // Convert Feherenheit temperature to Celcius
 function toCelsius (temp) {
  temp = (temp - 32) * (5/9);
@@ -43,3 +58,7 @@ function toFahrenheit (temp) {
   temp = temp.toFixed(1); // Round to one decimal place
   return temp;
 }
+
+///////////////////////
+//Add Event Listeners//
+///////////////////////
